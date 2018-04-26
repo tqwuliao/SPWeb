@@ -1,0 +1,93 @@
+.article-list {
+    padding-top: 64px;
+    left: 300px;
+    display: relative;
+    
+}
+
+.article-entry {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    
+}
+
+.article-title {
+    font-size:50px;
+    cursor: pointer;
+    transition: all 300ms;
+    text-transform: uppercase;
+}
+
+.article-title:before{
+    content: " ";
+    display: block;
+    width: 18px;
+    border-bottom:8px solid black;
+    height: 16px;
+    margin-bottom: 36px;
+    transition: width 300ms ease-out;
+}
+
+.article-title:hover:before{
+    width: 36px;
+    border-color: blueviolet;
+}
+
+.article-info {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #bbbbbb;
+    margin: 10px 0;
+}
+
+.article-title:hover {
+    color: blueviolet;
+}
+
+.article-container {
+    position: relative;
+    max-width: 826px;
+    left:50%;
+    padding-top: 64px;
+    transform: translateX(-50%);
+}
+
+.article-cont {
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+h2 {
+    transition:color 400ms;
+}
+
+h2.visiting {
+    color:red;
+}
+
+.quick-navi {
+    display: block;
+    position: fixed;
+    top: 64px;
+    right: 120px;
+    font-size: 12px;
+}
+
+.quick-navi::before {
+    content: "NAVIGATION";
+    display: block;
+    font-weight: 900;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+.quick-navi a {
+    display: block;
+    cursor: pointer;
+}
+
+.quick-navi a:hover {
+    color: grey;
+    font-weight: 900;
+}

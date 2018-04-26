@@ -1,0 +1,36 @@
+:root{
+    --table-border-color: #cccccc;
+}
+
+th,td {
+    border-right: 1px solid var(--table-border-color);
+    border-bottom: 1px solid var(--table-border-color);
+    padding: 4px 16px;
+    text-align: left;
+}
+
+th {
+    border-top: 1px solid var(--table-border-color);
+    background: #f0f0f0;
+}
+
+tr {
+    margin: 0;
+}
+
+tr:hover {
+    background: #fbfbfb;
+}
+
+table {
+    border-collapse:collapse;
+    margin-top: 140px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+tr {
+    border-left: 1px solid var(--table-border-color);
+    
+}

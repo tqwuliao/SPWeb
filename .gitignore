@@ -1,0 +1,9 @@
+server.js
+node_modules
+script
+article/mds
+*.mp3
+static_media
+webpack.config.js
+dist
+.vscode

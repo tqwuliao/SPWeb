@@ -1,0 +1,132 @@
+.input-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-top: 32px;
+}
+
+.input-container {
+    width: 400px;
+    margin: 20px 0;
+    height: 34px;
+    font-size: 14px;
+}
+
+.input-container input {
+    display: inline-block;
+    float: right;
+    width: 400px;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 14px;
+    padding: 6px 0px;
+    transition: all 300ms 300ms;
+    z-index: 1;
+    letter-spacing: 1px;
+
+}
+
+.input-container:before {
+    display: block;
+    content: " ";
+    width: 0%;
+    position: relative;
+    border-bottom: 3px solid #f3570e;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0%);
+    transition: all 500ms;
+}
+
+.input-container.focused:before {
+    width: 100%;
+}
+
+.input-container label {
+    float: left;
+    /* top: 10%; */
+    transform: translateY(-100%);
+    z-index: 0;
+    height: 26px;
+    position: relative;
+    display: inline-block;
+    transition: all 300ms;
+    color: gray;
+    pointer-events: none;
+}
+
+.input-container input:focus + label {
+    color: #f3570e;
+    transform: translateY(-180%);
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.input-container input.nonempty + label {
+    transform: translateY(-180%);
+    font-size: 0.8em;
+}
+
+.input-container input:focus {
+    color: #f3570e;
+    /*border-bottom: 2px solid brown;*/
+}
+
+.input-message {
+    float: right;
+    position: relative;
+    transform: translateX( 100%) translateY(-100%);
+    left: 50px;
+    display: inline-block;
+    text-align: right;
+    padding: 5px 10px;
+    width: 200px;
+    background: #FF5722;
+    font-size: 12px;
+    color: white;
+}
+
+.input-message.hidden {
+    display: none;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 5px;
+    width: 100px;
+    color: white;
+    background-color: #f3570e;
+    box-sizing: border-box;
+    
+    border-width: 0px;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 14px;
+
+    margin-top: 64px;
+}
+
+button:hover {
+    background-color: #f3973e;
+}
+
+.input-form h2 {
+    margin-top: 64px;
+    display: inline-block;
+    width: 100px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+}
+
+.input-form h2:after {
+    content: " ";
+    display: block;
+    width: 48px;
+    height: 30px;
+    border-bottom: 4px solid black;
+}
