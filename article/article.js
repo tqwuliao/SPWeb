@@ -87,16 +87,17 @@ register("article",function() {
 
     function getData(id) {
         if(id.length <= 0 || id[0] == "?") {
-            cb.next([{id:"1",title:"hello",content:"world"},{id:"2",title:"hello",content:"world"}]);
-
+            setTimeout(() => cb.next([{id:"1",title:"hello",content:"world"},{id:"2",title:"hello",content:"world"}]),100);
             //myget("list/",cb)
             
         } else {
-            cb.next({id:"1",title:"ARTICLE DEMO",content:`
+            setTimeout(() => cb.next({id:"1",title:"ARTICLE DEMO",content:`
             <h2>TestA</h2><p>Content</p><p>Content</p><br>
             <h2>TestB</h2><p>Content</p><p>Content</p><br>
             <h2>TestC</h2><p>Content</p><p>Content</p><br>
-            `,info:"Today"});
+            <h2>TestD</h2><p>Content</p><p>Content</p><br>
+            <h2>TestE</h2><p>Content</p><p>Content</p><br>
+            `,info:"Today"}),100);
             //myget(`get/${id}`,cb);
         }
     }
