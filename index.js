@@ -19,11 +19,11 @@ class ColContainer extends HtmlElement {
 
 register("homePage",function() {
     
-    let display = [[{ title: "你是傻逼", flex: 3 }, { title: "你才是", flex: 2 }],
-    [{ title: "别闹了", flex: 2 }, { title: "你们都是", flex: 2 }, { title: "大傻逼", flex: 2 }],
-    [{ title: "别闹了", flex: 1 }, { title: "你们都是", flex: 2 }, { title: "大傻逼", flex: 2 }],
-    [{ title: "别闹了", flex: 2 }, { title: "你们都是", flex: 1 }, { title: "大傻逼", flex: 2 }],
-    [{ title: "别闹了", flex: 2 }, { title: "你们都是", flex: 2 }, { title: "大傻逼", flex: 4 }]];
+    let display = [[{ title: "Test1", flex: 3 }, { title: "Test3", flex: 2 }],
+    [{ title: "Test-A", flex: 2 }, { title: "Test-B", flex: 2 }, { title: "Test-C", flex: 2 }],
+    [{ title: "Test-A", flex: 1 }, { title: "Test-B", flex: 2 }, { title: "Test-C", flex: 2 }],
+    [{ title: "Test-A", flex: 2 }, { title: "Test-B", flex: 1 }, { title: "Test-C", flex: 2 }],
+    [{ title: "Test-A", flex: 2 }, { title: "Test-B", flex: 2 }, { title: "Test-C", flex: 4 }]];
     let display_real = [];
     let endline = 0;
     display.map((row) => {
@@ -86,6 +86,5 @@ register("homePage",function() {
 console.log(1);
 $(window).on("load",()=>{ 
     header("homePage");
-    
     window.myreload["homePage"]();
 });

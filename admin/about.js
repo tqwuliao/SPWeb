@@ -51,7 +51,7 @@ register("admin",function() {
         type: "password"
     }));
     inputs.push(new InputHandler({
-        label: "巴拉巴拉"
+        label: "验证问题"
     }));
     createElement(new HtmlElement({className:"input-form",content:["<h2 >管理员登录</h2>",...inputs,
         new HtmlElement({labelName:"button",content:"登录"})]}),$(".content-container"));

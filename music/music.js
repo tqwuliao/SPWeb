@@ -56,7 +56,7 @@ class MusicBox extends HtmlElement {
 register( 'music',function() {
     $(".content-container").html("");
     let display = [
-        {id:"nt",title:"nightTown",desp:"不知道为什么脑洞里一直有这么一个场景：一个永夜的高空城市，仿佛一伸手就能碰到星星。非常努力的做出了这种~高处不胜寒~的空旷和孤寂的感觉，顺带加了一点点暗流涌动的危机感"}
+        {id:"nt",title:"nightTown",desp:"Nothing serious."}
         
     ];
     let display_real = [];

@@ -12,21 +12,7 @@ let aTitle = (str,id,list=false) => new HtmlElement(
             console.log(id);
             if (!list) return;
             history.pushState({ id: id }, "str", id);
-            
-            
-            
             window.myreload["article"]();
-            /*function getData(id) {
-                if(id.length <= 0) {
-                    myget("list/",cb)
-                    
-                } else {
-                    myget(`get/${id}`,cb);
-                }
-            }
-            
-            let cb = articleGenerator(id,getData);
-            cb.next();*/
 
         } : null
     });
@@ -59,9 +45,9 @@ function* articleGenerator(id,getData) {
     var data = yield getData(id);
 
     if (id.length <= 0) {
-        data = typeof data === "undefined" ? "[]" : data;
-        
-        data = JSON.parse(data);
+        data = typeof data === "undefined" ? [] : data;
+        console.log(data);
+        //data = JSON.parse(data);
         let cont = [];
         data.map((v) => {
             cont.push(new HtmlElement(
@@ -80,7 +66,7 @@ function* articleGenerator(id,getData) {
         createElement(articleEntry, $(".content-container"));
     } else {
         
-        data = JSON.parse(data);
+        //data = JSON.parse(data);
         $("title").html(`${data.title} - BoringHost`);
         let article = new HtmlElement(
             {
