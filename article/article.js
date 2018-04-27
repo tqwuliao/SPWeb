@@ -86,11 +86,18 @@ register("article",function() {
     const id = arr[arr.length-1];
 
     function getData(id) {
-        if(id.length <= 0) {
-            myget("list/",cb)
+        if(id.length <= 0 || id[0] == "?") {
+            cb.next([{id:"1",title:"hello",content:"world"},{id:"2",title:"hello",content:"world"}]);
+
+            //myget("list/",cb)
             
         } else {
-            myget(`get/${id}`,cb);
+            cb.next({id:"1",title:"ARTICLE DEMO",content:`
+            <h2>TestA</h2><p>Content</p><p>Content</p><br>
+            <h2>TestB</h2><p>Content</p><p>Content</p><br>
+            <h2>TestC</h2><p>Content</p><p>Content</p><br>
+            `,info:"Today"});
+            //myget(`get/${id}`,cb);
         }
     }
     
