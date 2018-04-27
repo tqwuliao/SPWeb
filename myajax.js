@@ -1,10 +1,10 @@
 'use strict';
 
-const FAKE_QUERY = true;
+
 
 export function myget(url,yieldcall) {
 
-
+    const FAKE_QUERY = true;
     if(!yieldcall) {
         return new Promise(function(resolve,reject) {
             if(!FAKE_QUERY) {
