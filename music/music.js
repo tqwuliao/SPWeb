@@ -71,7 +71,7 @@ register( 'music',function() {
     let active_id = 0;
     document.querySelector(".m-container").classList.add("m-container-selected");
     display_real[0].active();
-    $(document).on("mousewheel",(e) => {
+    /*$(document).on("mousewheel",(e) => {
         //console.log(e.originalEvent);
         if(e.originalEvent.deltaY > 0) {
             active_id++;
@@ -82,7 +82,7 @@ register( 'music',function() {
         if(active_id < 0) active_id = display_real.length- 1;
         document.querySelector(".m-container-selected").classList.remove("m-container-selected");
         document.querySelectorAll(".m-container")[active_id].classList.add("m-container-selected");
-    });
+    });*/
 });
 
 $(window).on("load",()=>{ 
